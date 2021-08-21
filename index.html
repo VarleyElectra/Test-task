@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Дата смерти 2021</title>
+</head>
+<body>
+  <div class="app">
+
+    <section class="container__image-blink section section__first-section">
+      <img src="images/blink.png" alt="Блик" class="image-blink">
+      <div class="container-up">
+          <div class="container">
+              <header class="header">
+                  <p class="text_transparent about__site" >Лучшие астрологи и экстрасенсы Румынии</p>
+                  <p class="text_transparent about__accuracy">Точность прогноза: 97%</p>
+              </header>
+
+              <div style="width: 100%">
+                  <div class="image-woman__container">
+                      <img src="images/icon1.svg" alt="Рамка для фото женщины" class="image-icon__transparent image-woman__border">
+                      <img src="images/woman1.png" alt="Фото женщины" class="image-woman">
+                  </div>
+              </div>
+
+              <div class="container-about__fear">
+                  <p class="text__main about__fear">
+                      Вас беспокоит вопрос о том,
+                      КОГДА ВЫ ПОКИНЕТЕ ЭТОТ МИР И ПРИ
+                      КАКИХ ОБСТОЯТЕЛЬСТВАХ?
+                  </p>
+              </div>
+
+              <div class="buttons-container__first-block">
+                  <a href="#questions">
+                      <button class="custom-btn">Да</button>
+                  </a>
+
+                  <button class="custom-btn">Нет</button>
+              </div>
+
+              <p class="text_transparent info">Онлайн предсказание</p>
+          </div>
+      </div>
+
+    </section>
+
+      <div data-aos="fade-in">
+          <section class="section section__sunset">
+              <div class="flex-container">
+                  <img src="images/hands.png" alt="Руки" class="image-hands">
+                  <div class="info-container">
+                      <p class="info-container__text">
+                          Позвольте нам раскрыть эту
+                          волнующую тайну и
+                          <span class="text__main">с точностью определить дату и время вашей смерти,</span>
+                          а также предшествующую
+                          этому событию причину
+                      </p>
+                  </div>
+              </div>
+          </section>
+      </div>
+
+
+      <div data-aos="fade-in">
+          <section class="section">
+              <div class="container__image-sunset">
+                  <img src="images/sunset.jpg" alt="Восход солнца" class="image-sunset">
+                  <div class="info-container-image">
+                      <div class="info-container-image__text">
+                          <p>Многие не верят
+                              предсказаниям и мы решили
+                              доказать каждому,
+                              <span class="text__main">что прогноз может изменить
+жизнь любого человека!</span></p>
+
+                      </div>
+                  </div>
+              </div>
+          </section>
+      </div>
+
+      <div data-aos="fade-in">
+          <template v-if="this.showedBlock === 1">
+              <section class="section section__last-section" id="questions">
+                  <div class="flex-container last-container">
+                      <h2><span class="text__main about-question">боитесь ли вы умереть?</span></h2>
+                      <div class="buttons-container buttons-container__first-block">
+                          <button class="custom-btn" @click="this.changeBlock">Да</button>
+                          <button class="custom-btn" @click="this.changeBlock">Нет</button>
+                          <p class="text_transparent question__first">Вопрос 1-5</p>
+                      </div>
+
+                      <img class="rune" src="images/rune1.svg" alt="Руна 1">
+                      <div class="about__death__container">
+                          <p class="about__death-first">Вы, конечно, умрете.
+                              И все, с кем вы знакомы,
+                              тоже однажды умрут.</p>
+                      </div>
+                      <img class="rune" src="images/rune2.svg" alt="Руна 2">
+                      <img src="images/eye.svg" alt="Глаз 1" class="image-icon__transparent eye__first-question">
+                      <img src="images/eye-1.svg" alt="Глаз 2" class="image-icon__transparent eye-1__first-question">
+                  </div>
+              </section>
+          </template>
+      </div>
+
+      <transition name="fade">
+          <template v-if="this.showedBlock === 2">
+              <section class="section section__null-margin-top">
+                  <div class="flex-container last-container">
+                      <div class="about__death__with-border__container">
+                          <p class="about__death">Мы расскажем Вам не только подробности
+                              вашей смерти, но также поможем Вам
+                              избежать этой ужасной даты и продлить
+                              вашу жизнь на многие годы.</p>
+                      </div>
+                      <h2 class="h2__null-bottom-margin"><span class="text__main about-question">когда вы чувствуете себя наиболее комфортно?</span></h2>
+                      <div class="buttons-container buttons-container__second">
+                          <button class="custom-btn" @click="this.changeBlock">Утро</button>
+                          <button class="custom-btn" @click="this.changeBlock">День</button>
+                          <button class="custom-btn" @click="this.changeBlock">Вечер</button>
+                          <button class="custom-btn" @click="this.changeBlock">Ночь</button>
+                      </div>
+
+                      <p class="text_transparent question">Вопрос 2-5</p>
+                      <img src="images/eye.svg" alt="Глаз 1" class="image-icon__transparent eye__second-question">
+                      <img src="images/eye-1.svg" alt="Глаз 2" class="image-icon__transparent eye-1__second-question">
+                  </div>
+              </section>
+          </template>
+      </transition>
+
+      <transition name="fade">
+          <template v-if="this.showedBlock === 3">
+              <section class="section section__null-margin-top">
+                  <div class="flex-container last-container">
+                      <div class="about__death__with-border__container">
+                          <p class="about__death">Уже совсем скоро Вы узнаете много
+                              интересного о своем будущем!</p>
+                      </div>
+                      <h2 class="h2__null-bottom-margin"><span class="text__main about-question">укажите свою дату рождения:</span></h2>
+
+                      <div class="buttons-container">
+                          <div class="select">
+                              <select v-model="selectedDay" ref="days">
+                                  <option value="День" selected disabled>День</option>
+                                  <option :value="day" v-for="day in this.maxDays" :key="day">{{day}}</option>
+                              </select>
+                              <span class="focus"></span>
+                          </div>
+                      </div>
+
+                      <div class="buttons-container">
+                          <div class="select">
+                              <select v-model="selectedMonth" ref="months">
+                                  <option value="Месяц" selected disabled>Месяц</option>
+                                  <option :value="month.name" v-for="month in months" :key="month">{{month.name}}</option>
+                              </select>
+                              <span class="focus"></span>
+                          </div>
+                      </div>
+
+                      <div class="buttons-container">
+                          <div class="select">
+                              <select v-model="selectedYear" ref="years">
+                                  <option value="Год" selected disabled>Год</option>
+                                  <option :value="year" v-for="year in years" :key="year">{{year}}</option>
+                              </select>
+                              <span class="focus"></span>
+                          </div>
+                      </div>
+
+                      <div class="buttons-container">
+                          <button class="custom-btn custom-btn__null-margin" @click="this.validateCheck">Далее</button>
+                      </div>
+                      <p class="text_transparent question">Вопрос 3-5</p>
+                      <img src="images/eye.svg" alt="Глаз 1" class="image-icon__transparent eye__second-question">
+                      <img src="images/eye-1.svg" alt="Глаз 2" class="image-icon__transparent eye-1__second-question">
+                  </div>
+              </section>
+          </template>
+      </transition>
+
+      <transition name="fade">
+          <template v-if="this.showedBlock === 4">
+              <section class="section">
+                  <div class="flex-container last-container load-container">
+                      <div class="loading bar">
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                      </div>
+                      <p class="text_transparent loading-text ">Loading</p>
+                  </div>
+              </section>
+          </template>
+      </transition>
+
+      <transition name="fade">
+          <template v-if="this.showedBlock === 5">
+              <section class="section section__null-margin-top">
+                  <div class="flex-container last-container">
+                      <div class="about__death__with-border__container">
+                          <p class="about__death">Смерть родного человека – одно из
+                              тяжелейших испытаний в жизни каждого
+                              из нас!</p>
+                      </div>
+                      <h2 class="h2__little-margin"><span class="text__main about-question">снятся ли ва умершие люди?</span></h2>
+                      <div class="buttons-container">
+                          <button class="custom-btn" @click="this.changeBlock">Да</button>
+                          <button class="custom-btn" @click="this.changeBlock">Нет</button>
+                          <button class="custom-btn" @click="this.changeBlock">Иногда</button>
+                      </div>
+
+                      <p class="text_transparent question">Вопрос 4-5</p>
+                      <img src="images/eye.svg" alt="Глаз 1" class="image-icon__transparent eye__second-question">
+                      <img src="images/eye-1.svg" alt="Глаз 2" class="image-icon__transparent eye-1__second-question">
+                  </div>
+              </section>
+          </template>
+      </transition>
+
+
+    <transition name="fade">
+        <template v-if="this.showedBlock === 6">
+            <section class="section section__null-margin-top">
+                <div class="flex-container last-container">
+                    <div class="about__death__with-border__container">
+                        <div class="bubble bubble-bottom-right">
+                            По вам скучает очень близкий человек, которого больше нет в мире живых.
+                            <span v-if="age > 36 && age < 45">Возможно это дедушка или бабушка</span>
+                            <span v-if="age >= 45">Возможно это кто-то из Ваших родителей.</span>
+                        </div>
+                    </div>
+                    <h2 class="h2__null-bottom-margin">
+                    <span class="text__main about-question about-question-long">Запись, которую Вы услышите,
+                    может шокировать людей с неокрепшей психикой. Вы готовы узнать, что ждет именно Вас?</span>
+                    </h2>
+                    <div class="buttons-container__first-block">
+                        <button class="custom-btn" @click="this.changeBlock">Да</button>
+                        <button class="custom-btn" @click="this.changeBlock">Затрудняюсь ответить</button>
+                    </div>
+
+                    <p class="text_transparent question">Вопрос 5-5</p>
+                    <img src="images/eye.svg" alt="Глаз 1" class="image-icon__transparent eye__second-question">
+                    <img src="images/eye-1.svg" alt="Глаз 2" class="image-icon__transparent eye-1__second-question">
+                </div>
+            </section>
+        </template>
+    </transition>
+
+
+    <transition name="fade">
+        <template v-if="this.showedBlock === 7">
+            <section class="section">
+                <div class="flex-container last-container last-container__microphone">
+                    <div class="microphone-container">
+                        <img src="images/microphone.svg" alt="Иконка микрофона" class="microphone-image">
+                        <progress v-bind:value="this.progress" max="100" id="progress"></progress>
+                        <p class="text_transparent microphone-text microphone-text__progress-value">{{ this.progress }}%</p>
+                        <p class="text_transparent microphone-text">Запись сообщения</p>
+                    </div>
+                </div>
+            </section>
+        </template>
+    </transition>
+
+    <transition name="fade">
+        <template v-if="this.showedBlock === 8">
+            <section class="section section__null-margin-top">
+                <div class="flex-container last-container final-block">
+
+                    <div class="bubble bubble-bottom-right bubble__normal-font">
+                        <p>Спасибо за Ваши ответы!
+                            <strong>Мы подготовили для Вас
+                                персональную аудио запись с Вашим
+                                прогнозом.</strong></p>
+                    </div>
+
+                    <div class="text-container text-container__white-text">
+                        <p>
+                            Вы можете узнать, как повлиять на события,
+                            которые ожидают вас в ближайшем будущем.
+                        </p>
+                    </div>
+
+                    <div class="text-container text-container__main-text">
+                        <p class="text__main">
+                            <span class="text-container__main-text__bold">Первое значимое событие может произойти уже 14.02.2021</span>,
+                            Вам надо быть готовым, что бы последствия не оказались необратимыми.
+                        </p>
+                    </div>
+
+                    <div class="text-container text-container__white-text">
+                        <p>
+                            Нажмите на кнопку ниже прямо сейчас и наберите наш номер телефона.
+                            Прослушайте важную информацию!
+                        </p>
+                    </div>
+
+                    <button class="custom-btn final-block__btn" @click="this.fetchingData">Позвонить и прослушать</button>
+
+                    <div class="text-container text-container__latin-text">
+                        <p class="text_transparent">
+                            TERMENI SI CONDITII: ACESTA ESTE UN
+                            SERVICIU DE DIVERTISMENT. PRIN FOLOSIREA LUI DECLARATI
+                            CA AVETI 18 ANI IMPLINITI.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </template>
+    </transition>
+
+      <transition name="fade">
+          <template v-if="this.showedBlock === 9">
+              <section class="section section__last-section">
+                  <div class="flex-container last-container">
+                      <h2><span class="text__main about-question">Информация</span></h2>
+
+                      <img class="rune" src="images/rune1.svg" alt="Руна 1">
+                      <div class="about__death__container">
+                          <p class="about__death-first">
+                              Имя: {{this.name}}
+                          </p>
+                      </div>
+                      <div class="about__death__container">
+                          <p class="about__death-first">
+                              Рост: {{this.height}}
+                          </p>
+                      </div>
+                      <div class="about__death__container">
+                          <p class="about__death-first">
+                              Вес: {{this.mass}}
+                          </p>
+                      </div>
+                      <div class="about__death__container">
+                          <p class="about__death-first">
+                              Цвет волос: {{this.hairColor}}
+                          </p>
+                      </div>
+                      <div class="about__death__container">
+                          <p class="about__death-first">
+                              Цвет глаз: {{this.eyeColor}}
+                          </p>
+                      </div>
+                      <button class="custom-btn final-block__btn" @click="this.showedBlock = 1">Пройти заново</button>
+                      <img class="rune" src="images/rune2.svg" alt="Руна 2">
+                  </div>
+              </section>
+          </template>
+      </transition>
+
+
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="app.js"></script>
+  <script>
+    const app = Vue.createApp({
+        data() {
+            return {
+                showedBlock: 1,
+                progress: 0,
+                selectedDay: 'День',
+                selectedMonth: 'Месяц',
+                selectedYear: 'Год',
+                maxDays: 31,
+                months: [
+                    {name: 'Январь', days: 31},
+                    {name: 'Февраль', days: 29},
+                    {name: 'Март', days: 31},
+                    {name: 'Апрель', days: 30},
+                    {name: 'Май', days: 31},
+                    {name: 'Июнь', days: 30},
+                    {name: 'Июль', days: 31},
+                    {name: 'Август', days: 31},
+                    {name: 'Сентябрь', days: 30},
+                    {name: 'Октябрь', days: 31},
+                    {name: 'Ноябрь', days: 30},
+                    {name: 'Декабрь', days: 31},
+                ],
+                monthNumber: 1,
+                urlToFetch: 'https://swapi.dev/api/people/1/',
+                name: "",
+                height: "",
+                mass: "",
+                hairColor: "",
+                eyeColor: "",
+            }
+        },
+
+        methods: {
+            changeBlock() {
+                this.showedBlock += 1;
+            },
+
+            validateCheck() {
+                if (this.selectedDay === 'День') {
+                    this.doWrongStyles(this.$refs.days)
+                }  else {
+                    this.doNormalStyles(this.$refs.days)
+                }
+                if (this.selectedMonth === 'Месяц') {
+                    this.doWrongStyles(this.$refs.months)
+                }   else {
+                    this.doNormalStyles(this.$refs.months)
+                }
+                if (this.selectedYear === 'Год') {
+                    this.doWrongStyles(this.$refs.years)
+                } else  {
+                    this.doNormalStyles(this.$refs.years)
+                }
+                if (this.selectedDay !== 'День' && this.selectedMonth !== 'Месяц' && this.selectedYear !== 'Год') {
+                    this.showedBlock += 1;
+                }
+            },
+
+            doWrongStyles(el) {
+                el.style.border = "1px solid #EE5353";
+                el.style.borderRadius = "50px"
+            },
+
+            doNormalStyles(el) {
+                el.style.border = "none";
+            },
+
+            changeProgress(time) {
+                let start = 0;
+                const progressEl = document.querySelector('#progress');
+                let interval = setInterval(() => {
+                    this.progress = start;
+                    start += 1;
+                    if (this.progress === 101) {
+                        clearInterval(interval)
+                        this.showedBlock = 8;
+                    }
+                }, time)
+            },
+
+            async fetchingData() {
+                let response = await fetch(this.urlToFetch);
+                if (response.ok) {
+                    let text = await response.text();
+                    let jsonObj = JSON.parse(text);
+                    this.name = jsonObj.name;
+                    this.height = jsonObj.height;
+                    this.mass = jsonObj.mass;
+                    this.hairColor = jsonObj.hair_color;
+                    this.eyeColor = jsonObj.eye_color;
+                    this.changeBlock()
+                } else {
+                    console.log("Ошибка: " + response.status)
+                }
+            }
+
+        },
+
+        computed: {
+            years: function () {
+                return [...Array(80).keys()].map(i => 2003 - i)
+            },
+            age: function () {
+                switch (this.selectedMonth) {
+                    case "Январь":
+                        this.monthNumber = 1;
+                        break;
+                    case "Февраль":
+                        this.monthNumber  = 2;
+                        break;
+                    case "Март":
+                        this.monthNumber  = 3;
+                        break;
+                    case "Апрель":
+                        this.monthNumber  = 4;
+                        break;
+                    case "Май":
+                        this.monthNumber  = 5;
+                        break;
+                    case "Июнь":
+                        this.monthNumber  = 6;
+                        break;
+                    case "Июль":
+                        this.monthNumber  = 7;
+                        break;
+                    case "Август":
+                        this.monthNumber  = 8;
+                        break;
+                    case "Сентябрь":
+                        this.monthNumber  = 9;
+                        break;
+                    case "Октябрь":
+                        this.monthNumber  = 10;
+                        break;
+                    case "Ноябрь":
+                        this.monthNumber  = 11;
+                        break;
+                    case "Декабрь":
+                        this.monthNumber  = 12;
+                        break;
+                }
+                const currentDate = new Date();
+                const birthDate = new Date("" + this.selectedYear + "/" + this.monthNumber + "/" + this.selectedDay);
+                const diff = currentDate - birthDate;
+                return Math.floor(diff/31536000000);
+            }
+        },
+
+        watch: {
+            showedBlock: function (newValue) {
+                if (newValue === 4) {
+                    setTimeout(() => {
+                        this.showedBlock = 5
+                    }, 2000)
+                }
+                if (newValue === 7) {
+                    this.changeProgress(50)
+                }
+            },
+            selectedMonth: {
+               handler(newValue) {
+                   this.maxDays = this.months.find(month => month.name === this.selectedMonth).days
+               }
+            },
+        }
+
+    });
+    app.mount('.app')
+  </script>
+</body>
+</html>
